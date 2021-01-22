@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+
+        <style>
+            body {
+                text-align: center;
+                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
+}
+
+
+            #heading {
+                color: rgb(33, 6, 65);
+                font-family: cursive;
+                text-decoration-color: rgb(243, 97, 0);
+            }
+
+            #image {
+                height:450px;
+                width:400px;
+                border-radius: 10%;
+                border-style: double;
+                border-width: 5px;
+                background-color: white;
+            }
+
+            #name {
+               color: rgb(0, 47, 255); 
+               font-weight: bold;
+               font-size: 22px;
+               font-family: cursive;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <h1 id="heading">THE FAMILY BOOK</h1>
+
+        <img id="image" 
+        src="https://images-na.ssl-images-amazon.com/images/I/91zbi9M+mKL.jpg">
+
+        <h4 id="name"></h4>
+
+        <button onclick="next()">
+            Next
+        </button>
+
+
+        <script>
+            var members= [
+                
+                "https://lh3.googleusercontent.com/proxy/5TfdvvjCH3y-Dz2Fwdbn-4qdzvLV1sfalSKQZGYz_Y-eM54ltFKV-S7AQBURMwYs3mcCb6-hsf1Z_Obnv7777wG_ifaPgMg",
+                "https://lh3.googleusercontent.com/proxy/E8NN6KSKRUWLXZdGr5_SSkEZvMxkvyfKL7WAtAm4MSJXFkpcTjUywcUdAN-5yj7FNfQeP_Tg-7Jxi4IUE0sSMC1h2pkm9mN2yIRijy8",
+                "https://wallpapercave.com/wp/wp1890201.jpg"
+            ];
+            var names= [
+                "Mr. Bikash Ranjan Das",
+                "Mrs. Rooplekha Singh",
+                "Bighneshi and Rudrakshi Das"
+            ];
+            var i=0;
+            function next(){
+            document.getElementById("image").src=members[i];
+            document.getElementById("name").innerHTML=names[i];
+            if (i>4){
+            i=0;
+            }
+            else i++;
+            };
+        </script>
+    </body>
+</html>
